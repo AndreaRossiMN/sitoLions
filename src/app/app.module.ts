@@ -14,6 +14,9 @@ import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import { FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
+import { ClassificaService } from 'src/services/classifica/classifica.service';
+import { TappeComponent } from 'src/pages/classifica/tappe.component';
+import { ClassificaComponent } from 'src/pages/classifica/classifica.component';
 
 FullCalendarModule.registerPlugins([ 
   dayGridPlugin,
@@ -24,7 +27,9 @@ FullCalendarModule.registerPlugins([
   declarations: [
     AppComponent,
     CalendarioEventiComponent,
-    NuovoEventoComponent
+    NuovoEventoComponent,
+    TappeComponent,
+    ClassificaComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +45,7 @@ FullCalendarModule.registerPlugins([
   ],
   providers: [
     CalendarioEventiService,
+    ClassificaService,
     DatePipe, 
     {
     provide: MatDialogRef,

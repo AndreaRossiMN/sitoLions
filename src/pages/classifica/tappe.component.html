@@ -1,0 +1,25 @@
+<h2>Storico Tappe</h2>
+<div class="row border rounded" *ngFor="let tappa of tappe">
+    <div class="col-12 col-lg-6">
+      <!--start card-->
+      <div class="card-wrapper">
+        <div class="card">
+          <div class="card-body">
+            <div class="categoryicon-top">
+              <svg class="icon">
+                <use xlink:href="/assets/svg/sprite.svg#it-calendar"></use>
+              </svg>
+              <span class="text">{{ tappa.name }}</span>
+            </div>
+            <p class="card-text" *ngFor="let entry of tappa.entries">
+              <svg class="icon">
+                <use xlink:href="/assets/svg/sprite.svg#it-chevron-right"></use>
+              </svg>
+              <span class="text">{{ entry.team }} - {{ entry.points }}pt</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--end card-->
+    </div>
+  </div>

@@ -14,11 +14,11 @@ export class CalendarioEventiService {
   constructor(private http: HttpClient) { }
   
   public getEventi(filter: IEventiFilter): Observable<any> {
-    return this.http.get<any>(`${environment.apiUrl}/Eventi`);
+    return this.http.get<any>(`${environment.calendarioUrl}/Eventi`);
   }
 
   public createEvento(evento: EventoAws): Observable<any> {
-		return this.http.put<any>(`${environment.apiUrl}/Eventi`, evento);
+		return this.http.put<any>(`${environment.calendarioUrl}/Eventi`, evento);
 	}
 
   public updateEvento(evento: EventoAws, oldData: Date): Observable<any> {
@@ -28,7 +28,7 @@ export class CalendarioEventiService {
       Data: evento.Data,
       OldData: oldData
     };
-    return this.http.post<any>(`${environment.apiUrl}/Eventi`, editEvento);
+    return this.http.post<any>(`${environment.calendarioUrl}/Eventi`, editEvento);
 	}
 
 }
