@@ -1,0 +1,32 @@
+<div>
+    <div class="form-group req col-md-12">
+        <label for="data">{{evento.Data | date :'dd/MM/yyyy' }}</label>
+        <input type="text" 
+            name="data" 
+            id="data" 
+            class="form-control"
+            maxlength="60"  
+            disabled>
+    </div>
+    <div class="form-group req col-md-12">
+        <label for="denominazione">Nome</label>
+        <input type="text" name="denominazione" id="denominazione" class="form-control"
+            maxlength="60" 
+            [(ngModel)]="evento.Nome">
+    </div>
+    <div class="form-group req col-md-4">
+        <label for="orario">Orario</label>
+        <input type="text" name="orario" id="orario" class="form-control"
+            maxlength="5"
+            [(ngModel)] = "hour"
+            (ngModelChange)="formatHour()">
+    </div>
+</div>
+<div class="float-right pt-3">
+    <button type="button" class="btn btn-outline-primary btn-sm mr-2" (click)="dialogRef.close()">
+        <span [innerHTML]="'Annulla'"></span>
+    </button>
+    <button type="button" class="btn btn-primary btn-sm mr-2" (click)="salva()">
+        <span [innerHTML]="editMode ? 'Modifica': 'Salva'"></span>
+    </button>
+</div>

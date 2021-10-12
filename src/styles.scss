@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@font-face {
+    font-family: "Lora";
+    src: local("Lora"), url(/assets/fonts/Lora/Lora.ttf) format("truetype");
+} 
+@font-face {
+    font-family: "Roboto_Mono";
+    src: local("Roboto_Mono"), url(/assets/fonts/Roboto_Mono/Roboto_Mono.ttf) format("truetype");
+} 
+@font-face {
+    font-family: "Titillium_Web";
+    src: local("Titillium_Web"), url(/assets/fonts/Titillium_Web/Titillium_Web.ttf) format("truetype");
+} 
